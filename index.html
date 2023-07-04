@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://cdn.glitch.global/a2299863-d3d7-4bff-b737-d6d73ebeb990/lhc-1.glb?v=1687959245324"></script>
+    <script src="https://cdn.glitch.global/a2299863-d3d7-4bff-b737-d6d73ebeb990/lhc_draft1.glb?v=1688463046175"></script>
+    <script src="https://cdn.glitch.global/a2299863-d3d7-4bff-b737-d6d73ebeb990/character1%3F.glb?v=1688459292049"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+  </head>
+ 
+  <body>
+    <a-scene>
+      <a-asset>
+        <a-asset-item
+          id="lhc-1"
+          src="https://cdn.glitch.global/a2299863-d3d7-4bff-b737-d6d73ebeb990/lhc-1.glb?v=1687959245324"
+        ></a-asset-item>
+        <a-asset-item
+          id="lhc_draft1"
+          src="https://cdn.glitch.global/a2299863-d3d7-4bff-b737-d6d73ebeb990/lhc_draft1.glb?v=1688463046175"
+        ></a-asset-item>
+        <a-asset-item
+          id="character1?"
+          src="https://cdn.glitch.global/a2299863-d3d7-4bff-b737-d6d73ebeb990/character1%3F.glb?v=1688459292049"
+        ></a-asset-item>
+      </a-asset
+        gltf-model="#lhc-1"
+        position="-100 0 -3"
+        scale="1 1 1"
+        rotation="0 270 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#lhc_draft1"
+        position="0 0 0"
+        scale="3 3 3"
+        rotation="0 180 0"
+      ></a-entity>
+*      <a-entity
+        gltf-model="character1?"
+        position="10 10 10"
+        scale="3 3 3"
+        rotation="0 0 0"
+      ></a-entity>
+      <a-entity
+        id="dust"
+        position="10 5 0"
+        particle-system="preset: dust;"
+      ></a-entity>
+      <a-entity
+        position="0 5 -5"
+        particle-system="preset: dust; texture: ./images/star2.png; color: #0000FF;"
+      ></a-entity>
+      <a-entity
+        id="rain"
+        particle-system="preset: rain; color: #24CAFF; particleCount: 5000;"
+      ></a-entity>
+      <a-entity 
+        id="snow" particle-system="preset: snow; color: #24CAFF; particleCount: 5000"
+      ></a-entity>  
+      <a-entity 
+        id="light" light="type: ambient; color: #888"
+      ></a-entity>
+<!--      <a-entity camera="active: true" look-controls wasd-controls position="1 1 1" data-aframe-default-camera></a-entity> -->
+
+     <a-plane
+        position="-100 0 0"
+        rotation="-90 0 0"
+        width="8"
+        height="8"
+        color="#7BC8A4"
+      ></a-plane>
+      <a-plane
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="11"
+        height="11"
+        color="#ADD8E6"
+      ></a-plane>
+      <a-sky color="black"></a-sky>
+    </a-scene>
+  </body>
+</html> 
+
+
